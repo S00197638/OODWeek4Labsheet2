@@ -9,7 +9,8 @@ namespace Exercises6To8
         {
             string[] names = { "Mary", "Joseph", "Michael", "Sarah", "Margaret", "John" };
 
-            #region Exercise6
+            #region Exercise6&7
+            //Ordered Alphabetically
             //Query
             #region Query
             //var outputNames = from name in names
