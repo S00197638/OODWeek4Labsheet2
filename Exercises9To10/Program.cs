@@ -14,7 +14,8 @@ namespace Exercises9To10
             #region Query
             //var outputCustomers = from customer in customers
             //                      orderby customer.Name ascending //Ordered Alphabetically
-            //                      where customer.City.Equals("Dublin") //City = Dublin
+            //                      where customer.City.Equals("Dublin") //City = Dublin or
+            //                          || customer.City.Equals("Galway") //City = Galway
             //                      select customer;
             #endregion
 
@@ -22,7 +23,8 @@ namespace Exercises9To10
             #region Lambda
             var outputCustomers = customers
                 .OrderBy(c => c.Name) //Ordered Alphabetically
-                .Where(c => c.City.Equals("Dublin")); //City = Dublin
+                .Where(c => c.City.Equals("Dublin") //City = Dublin or
+                    || c.City.Equals("Galway")); //City = Galway
             #endregion
 
             foreach (Customer customer in outputCustomers)
@@ -35,7 +37,7 @@ namespace Exercises9To10
             Customer c2 = new Customer { Name = "Sally", City = "Galway" };
             Customer c3 = new Customer { Name = "George", City = "Cork" };
             Customer c4 = new Customer { Name = "Molly", City = "Dublin" };
-            Customer c5 = new Customer { Name = "Jow", City = "Galway" };
+            Customer c5 = new Customer { Name = "Joe", City = "Galway" };
 
             List<Customer> customers = new List<Customer>();
             customers.Add(c1);
