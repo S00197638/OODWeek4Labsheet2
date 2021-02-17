@@ -8,24 +8,25 @@ namespace Exercises6To8
         static void Main(string[] args)
         {
             string[] names = { "Mary", "Joseph", "Michael", "Sarah", "Margaret", "John" };
+            string character = "M";
 
-            #region Exercise6&7
-            //Ordered Alphabetically
             //Query
             #region Query
             //var outputNames = from name in names
-            //                        orderby name ascending
-            //                        select name;
+            //                  orderby name ascending //Ordered Alphabetically
+            //                  where name.StartsWith(character) //Starts with M
+            //                  select name;
             #endregion
 
             //Lambda
             #region Lambda
-            var outputNames = names.OrderBy(n => n);
+            var outputNames = names
+                .OrderBy(n => n) //Ordered Alphabetically
+                .Where(n => n.StartsWith(character)); //Starts with M
             #endregion
 
             foreach (string name in outputNames)
                 Console.WriteLine(name);
-            #endregion
         }
     }
 }
